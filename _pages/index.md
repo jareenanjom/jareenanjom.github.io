@@ -26,7 +26,7 @@ redirect_from:
   .profile-sidebar {
     position: sticky;
     top: 100px;
-    padding: 32px 24px;
+    padding: 20px 16px;
     background: #ffffff;
     border: 1px solid #e6e6e6;
     border-radius: 24px;
@@ -34,16 +34,16 @@ redirect_from:
   }
   
   .profile-sidebar h1 {
-    font-size: 2.1em;
-    margin: 16px 0 8px;
+    font-size: 1.8em;
+    margin: 12px 0 6px;
     color: #1f2937;
   }
   
   .profile-image {
-    width: 240px;
-    height: 320px;
+    width: 200px;
+    height: 267px;
     border-radius: 8px;
-    margin: 0 auto 24px;
+    margin: 0 auto 16px;
     background-color: #f5f7fb;
     display: flex;
     align-items: center;
@@ -56,14 +56,14 @@ redirect_from:
   .profile-meta {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px;
+    margin: 0 0 12px;
     color: #374151;
-    font-size: 0.97em;
-    line-height: 1.8;
+    font-size: 0.90em;
+    line-height: 1.5;
   }
   
   .profile-meta li {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   
   .profile-meta a {
@@ -84,21 +84,21 @@ redirect_from:
   .profile-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px;
   }
   
   .profile-link-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 9px 10px;
-    border-radius: 10px;
+    gap: 4px;
+    padding: 7px 8px;
+    border-radius: 8px;
     color: white;
-    font-size: 0.82em;
+    font-size: 0.75em;
     font-weight: 600;
     text-decoration: none;
-    min-height: 38px;
+    min-height: 34px;
     transition: background-color 0.3s ease;
   }
   
@@ -406,7 +406,7 @@ redirect_from:
   <aside class="profile-sidebar">
     <div id="home" class="nav-anchor"></div>
     <div class="profile-image">
-      <img src="/assets/images/Profile-Picture1.png" alt="Jareen Anjom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+      <img src="/assets/images/Profile-Picture1.png" alt="Jareen Anjom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none';">
     </div>
     <h1>Jareen Anjom</h1>
     <ul class="profile-meta">
@@ -428,7 +428,7 @@ redirect_from:
 <!-- About Me Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p><strong>I am an <strong>AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
+  <p><strong>I am Jareen Anjom</strong>, an <strong>AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
   <p>Currently, I contribute to both industry and academic research, developing <strong>AI-driven solutions</strong> for real-world applications while conducting research in <strong>healthcare AI</strong> and <strong>scientific machine learning</strong>. My work spans <strong>wearable sensing</strong>, <strong>computer vision</strong>, <strong>edge intelligence</strong>, and <strong>physics-informed learning</strong>, with the goal of creating intelligent systems that are both <strong>impactful</strong> and <strong>deployable</strong>.</p>
   <p>I received my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>North South University, Bangladesh</strong>, graduating <strong>Summa Cum Laude</strong> and ranking among the <strong>top 5%</strong> of my graduating class. My research has resulted in <strong>peer-reviewed publications</strong> in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
   <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
@@ -609,6 +609,4 @@ redirect_from:
 <!-- Footer -->
 <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.9em;">
   <p>Last updated: June 2026</p>
-</div>
-  </div>
-</div>
+</div></div></div>
