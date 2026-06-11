@@ -14,9 +14,95 @@ redirect_from:
     scroll-behavior: smooth;
   }
   
+  .page-shell {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .profile-sidebar {
+    position: sticky;
+    top: 100px;
+    padding: 32px 24px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(44, 44, 44, 0.06);
+  }
+  
+  .profile-sidebar h1 {
+    font-size: 2.1em;
+    margin: 16px 0 8px;
+    color: #1f2937;
+  }
+  
+  .profile-role {
+    margin-bottom: 18px;
+    color: #4b5563;
+    font-size: 1.05em;
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    background-color: #f5f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #9ca3af;
+    border: 2px solid #e5e7eb;
+  }
+  
+  .profile-summary {
+    color: #555b63;
+    line-height: 1.7;
+    font-size: 0.98em;
+    margin-bottom: 24px;
+  }
+  
+  .profile-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    color: #4b5563;
+    font-size: 0.95em;
+    line-height: 1.8;
+  }
+  
+  .profile-meta li {
+    margin-bottom: 10px;
+  }
+  
+  .profile-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  
+  .profile-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-size: 0.92em;
+  }
+  
+  .profile-links a:hover {
+    background-color: #0056b3;
+  }
+  
   .section {
     margin-bottom: 60px;
-    padding: 40px 0;
+    padding: 0;
     border-bottom: 1px solid #e0e0e0;
   }
   
@@ -37,52 +123,17 @@ redirect_from:
     color: #444;
   }
   
-  .profile-header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 40px 0;
-  }
-  
-  .profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #999;
-    border: 2px solid #ddd;
-  }
-  
-  .profile-links {
-    margin-top: 20px;
-  }
-  
-  .profile-links a {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 14px;
-  }
-  
-  .profile-links a:hover {
-    background-color: #0056b3;
+  .what-new-item,
+  .publication-item,
+  .experience-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
   }
   
   .what-new-item {
-    margin-bottom: 25px;
-    padding: 15px;
-    background-color: #f9f9f9;
     border-left: 4px solid #007bff;
-    border-radius: 3px;
   }
   
   .what-new-date {
@@ -92,22 +143,16 @@ redirect_from:
   }
   
   .what-new-text {
-    margin-top: 8px;
+    margin-top: 10px;
     line-height: 1.6;
     color: #555;
-  }
-  
-  .publication-item {
-    margin-bottom: 25px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
   }
   
   .publication-title {
     font-weight: bold;
     font-size: 1.05em;
     margin-bottom: 8px;
+    color: #1f2937;
   }
   
   .publication-meta {
@@ -117,17 +162,18 @@ redirect_from:
   }
   
   .publication-links {
-    margin-top: 8px;
+    margin-top: 12px;
   }
   
   .publication-links a {
     display: inline-block;
     margin-right: 12px;
-    padding: 5px 10px;
+    margin-bottom: 8px;
+    padding: 7px 12px;
     background-color: #e8e8e8;
     color: #333;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 12px;
     transition: background-color 0.3s;
   }
@@ -136,17 +182,11 @@ redirect_from:
     background-color: #d0d0d0;
   }
   
-  .experience-item {
-    margin-bottom: 25px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-  }
-  
   .position-title {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 5px;
+    color: #1f2937;
   }
   
   .position-org {
@@ -167,8 +207,8 @@ redirect_from:
   }
   
   .position-bullets li {
-    margin-bottom: 8px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.6;
     color: #555;
     font-size: 14px;
   }
@@ -179,26 +219,57 @@ redirect_from:
     margin-top: -60px;
     visibility: hidden;
   }
+  
+  @media (max-width: 1024px) {
+    .page-shell {
+      grid-template-columns: 1fr;
+    }
+    
+    .profile-sidebar {
+      position: relative;
+      top: auto;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .profile-links {
+      grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+      width: 160px;
+      height: 160px;
+    }
+  }
 </style>
 
 <!-- Hero Section -->
-<div id="home" class="nav-anchor"></div>
-<div class="profile-header">
-  <div class="profile-image">
-    Portrait (upload PNG later)
-  </div>
-  <h1 style="margin: 20px 0 10px 0; font-size: 2.5em;">Jareen Anjom</h1>
-  <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;">AI Researcher | Deep Learning Specialist</p>
-  <p style="color: #888; font-size: 0.95em; max-width: 600px; margin: 10px auto;">
-    Leveraging deep learning and edge intelligence for healthcare applications, assistive technologies, and real-world problem solving.
-  </p>
-  <div class="profile-links">
-    <a href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a href="https://orcid.org/0009-0003-9091-9992" target="_blank">ORCID</a>
-    <a href="https://github.com/jareenanjom" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/jareen-anjom/" target="_blank">LinkedIn</a>
-  </div>
-</div>
+<div class="page-shell">
+  <aside class="profile-sidebar">
+    <div id="home" class="nav-anchor"></div>
+    <div class="profile-image">
+      Portrait (upload PNG later)
+    </div>
+    <h1>Jareen Anjom</h1>
+    <p class="profile-role">AI Researcher | Deep Learning Specialist</p>
+    <p class="profile-summary">
+      I build AI systems for healthcare, wearable sensing, and intelligent enterprise applications using lightweight models, edge intelligence, and modern ML toolchains.
+    </p>
+    <ul class="profile-meta">
+      <li>Kuwait City, Kuwait</li>
+      <li>AI Specialist at Fidelity Technologies</li>
+      <li>Research Assistant at Kuwait University</li>
+      <li>Deep Learning • Edge AI • Computer Vision</li>
+    </ul>
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://orcid.org/0009-0003-9091-9992" target="_blank">ORCID</a>
+      <a href="https://github.com/jareenanjom" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/jareen-anjom/" target="_blank">LinkedIn</a>
+    </div>
+  </aside>
+  <div class="page-content">
 
 <!-- What's New Section -->
 <div class="section">
@@ -348,43 +419,57 @@ redirect_from:
   <h2>Experience</h2>
   
   <div class="experience-item">
-    <div class="position-title">Research Assistant</div>
-    <div class="position-org">Kuwait University, Kuwait</div>
-    <div class="position-dates">June 2025 – Present</div>
-    <ul class="position-bullets">
-      <li>Develop and optimize machine learning models for real-time heat stress prediction in the KU campus using physiological and environmental sensor data collected from Bangle.js 2 wearable devices</li>
-      <li>Review literature and draft research articles for journal and conference publications related to wearable health monitoring and AI-based healthcare systems</li>
-    </ul>
-  </div>
-  
-  <div class="experience-item">
     <div class="position-title">AI Specialist</div>
-    <div class="position-org">Fidelity Technologies, Kuwait</div>
-    <div class="position-dates">May 2025 – Present</div>
+    <div class="position-org">Fidelity Technologies, Kuwait | May 2025 – Present</div>
     <ul class="position-bullets">
-      <li>Develop and maintain on-premise company AI assistant leveraging lightweight LLMs (HuggingFace, Ollama) for intelligent RAG (vector + bm25) and agents for multi-task handling</li>
-      <li>Integrate AI pipelines into existing content management systems to improve workload efficiency</li>
-      <li>Engineer predictive machine learning algorithms improving company productivity with 90%+ accuracy</li>
+      <li>Develop and maintain on-premise AI assistants using lightweight LLMs, HuggingFace models, Ollama, Retrieval-Augmented Generation (RAG), and intelligent agent frameworks.</li>
+      <li>Integrate AI solutions into enterprise workflows and content management systems.</li>
+      <li>Design predictive machine learning solutions and automation pipelines for business applications.</li>
     </ul>
   </div>
   
   <div class="experience-item">
     <div class="position-title">Research Assistant</div>
-    <div class="position-org">North South University, Bangladesh</div>
-    <div class="position-dates">January 2024 – January 2025</div>
+    <div class="position-org">Kuwait University, Kuwait | June 2025 – Present</div>
+    <p>Conducting research in machine learning, healthcare AI, wearable sensing, and scientific machine learning under multiple funded research initiatives.</p>
+    <div class="position-meta"><strong>Project 1: Heat Stress Prediction using Wearable Sensors</strong></div>
     <ul class="position-bullets">
-      <li>Performed original research in the field of computer vision; designed and trained deep learning algorithms for specific objects of interest, solving real-world problems</li>
-      <li>Tested, evaluated, and optimized models for resource-constrained devices</li>
+      <li>Develop machine learning models for real-time heat stress prediction using physiological and environmental data collected from Bangle.js 2 wearable devices.</li>
+      <li>Investigate the relationship between environmental conditions, physiological responses, and heat-related risks in hot-arid climates.</li>
+      <li>Conduct literature reviews and contribute to manuscript preparation for journal and conference publications.</li>
+      <li>An initial abstract based on this work was presented at the Kuwait International Conference on Life Sciences (KICLS 2025).</li>
+    </ul>
+    <div class="position-meta"><strong>Project 2: Modeling Ultrasound Waves using Physics-Informed ResNet Approximators</strong></div>
+    <p><em>Research Grant: ZF01/25 | June 2026 – Present</em></p>
+    <ul class="position-bullets">
+      <li>Develop Physics-Informed Neural Networks (PINNs) and ResNet-based surrogate models for ultrasound wave propagation governed by partial differential equations (PDEs).</li>
+      <li>Benchmark deep learning approximators against traditional Finite Difference Method (FDM) simulations.</li>
+      <li>Extend modeling approaches toward realistic skull-image domains for biomedical ultrasound applications.</li>
+      <li>Develop reproducible machine learning workflows using Python, PyTorch, TensorFlow, version control systems, and containerized environments.</li>
+      <li>Assist in experiment design, result analysis, visualization, and scientific publication preparation.</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <div class="position-title">Research Assistant</div>
+    <div class="position-org">North South University, Bangladesh | January 2024 – January 2025</div>
+    <p><strong>Research Grant:</strong> CTRG-23-SEPS-29</p>
+    <ul class="position-bullets">
+      <li>Conducted research in computer vision and deep edge intelligence.</li>
+      <li>Designed, trained, and optimized deep learning models for deployment on resource-constrained devices.</li>
+      <li>Contributed to research projects in healthcare AI, assistive technologies, satellite imagery analysis, and computer vision applications.</li>
+      <li>Participated in manuscript preparation and publication of peer-reviewed research articles.</li>
     </ul>
   </div>
   
   <div class="experience-item">
     <div class="position-title">Teaching Assistant</div>
-    <div class="position-org">North South University, Bangladesh</div>
-    <div class="position-dates">June 2023 – December 2024</div>
+    <div class="position-org">CSE311: Database Management Systems</div>
+    <div class="position-org">North South University, Bangladesh | June 2023 – December 2024</div>
     <ul class="position-bullets">
-      <li>CSE311 Database Management System: Assessed SQL/MS-SQL projects and assignments</li>
-      <li>Conducted tutorial sessions for students needing extra help outside of class hours</li>
+      <li>Assisted in teaching SQL and database management concepts.</li>
+      <li>Evaluated assignments, projects, and laboratory work.</li>
+      <li>Conducted tutorial sessions and provided academic support to undergraduate students.</li>
     </ul>
   </div>
 </div>
@@ -406,4 +491,6 @@ redirect_from:
     Last updated: June 2026 | 
     <a href="/files/Jareen_Anjom_CV.pdf" style="color: #007bff; text-decoration: none;">Download Full CV</a>
   </p>
+</div>
+  </div>
 </div>
