@@ -1,0 +1,19 @@
+# Main navigation
+main:
+  - title: "Home"
+    url: "#home"
+    
+  - title: "About"
+    url: "#about"
+    
+  - title: "Publications"
+    url: "#publications"
+    
+  - title: "Experience"
+    url: "#experience"
+    
+  - title: "Teaching"
+    url: "#teaching"
+    
+  - title: "Download CV"
+    url: "/files/Jareen_Anjom_CV.pdf"
