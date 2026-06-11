@@ -40,8 +40,8 @@ redirect_from:
   }
   
   .profile-image {
-    width: 200px;
-    height: 267px;
+    width: 170px;
+    height: 227px;
     border-radius: 8px;
     margin: 0 auto 16px;
     background-color: #f5f7fb;
@@ -191,7 +191,7 @@ redirect_from:
   }
   
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding: 0;
     border-bottom: 1px solid #e0e0e0;
   }
@@ -430,10 +430,7 @@ redirect_from:
   <p><strong>I am an AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
   <p>Currently, I contribute to both industry and academic research, developing <strong>AI-driven solutions</strong> for real-world applications while conducting research in <strong>healthcare AI</strong> and <strong>scientific machine learning</strong>. My work spans <strong>wearable sensing</strong>, <strong>computer vision</strong>, <strong>edge intelligence</strong>, and <strong>physics-informed learning</strong>, with the goal of creating intelligent systems that are both <strong>impactful</strong> and <strong>deployable</strong>.</p>
   <p>I received my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>North South University, Bangladesh</strong>, graduating <strong>Summa Cum Laude</strong> and ranking among the <strong>top 5%</strong> of my graduating class. My research has resulted in <strong>peer-reviewed publications</strong> in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
-  <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
-  <div style="text-align: center; margin-top: 20px;">
-    <a class="profile-link-button cv" href="/files/Jareen_Anjom_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i>CV</a>
-  </div>
+  <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning. <span style="display: inline-block; margin-left: 12px;"><a class="profile-link-button cv" href="/files/Jareen_Anjom_CV.pdf" target="_blank" style="padding: 5px 10px; font-size: 0.70em;"><i class="fas fa-file-pdf"></i>CV</a></span></p>
 </div>
 
 <!-- What's New Section -->
@@ -550,37 +547,33 @@ redirect_from:
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">SatNet-B3: A Lightweight Deep Edge Intelligence Framework for Satellite Imagery Classification</div>
+          <div class="publication-title">SatNet-B3: A Lightweight Deep Edge Intelligence Framework for Satellite Imagery Classification <a class="doi-button" href="https://doi.org/10.3390/fi17120579" target="_blank">DOI</a></div>
           <p class="publication-meta">T. Hasan, <strong>J. Anjom</strong>, Md. I. A. Hossain, and Z. U. Shamszaman — Future Internet, vol. 17, no. 12, p. 579, December 2025</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.3390/fi17120579" target="_blank">DOI</a>
       </div>
     </li>
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">Towards Walkable Footpath Detection for the Visually Impaired on Bangladeshi Roads with Smartphones Using Deep Edge Intelligence</div>
+          <div class="publication-title">Towards Walkable Footpath Detection for the Visually Impaired on Bangladeshi Roads with Smartphones Using Deep Edge Intelligence <a class="doi-button" href="https://doi.org/10.1016/j.array.2025.100353" target="_blank">DOI</a></div>
           <p class="publication-meta">Md. I. A. Hossain, <strong>J. Anjom</strong>, and R. I. Chowdhury — Array, July 2025</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.1016/j.array.2025.100353" target="_blank">DOI</a>
       </div>
     </li>
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">Leveraging deep edge intelligence for real-time respiratory disease detection</div>
+          <div class="publication-title">Leveraging deep edge intelligence for real-time respiratory disease detection <a class="doi-button" href="https://doi.org/10.1016/j.ceh.2025.01.001" target="_blank">DOI</a></div>
           <p class="publication-meta">T. T. Oishee, <strong>J. Anjom</strong>, U. Mohammed, and Md. I. A. Hossain — Clinical eHealth, January 2025</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.1016/j.ceh.2025.01.001" target="_blank">DOI</a>
       </div>
     </li>
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">A Novel Edge Intelligence-based Solution for Safer Footpath Navigation of Visually Impaired Using Computer Vision</div>
+          <div class="publication-title">A Novel Edge Intelligence-based Solution for Safer Footpath Navigation of Visually Impaired Using Computer Vision <a class="doi-button" href="https://doi.org/10.1016/j.jksuci.2024.102191" target="_blank">DOI</a></div>
           <p class="publication-meta">R. I. Chowdhury, <strong>J. Anjom</strong>, and Md. I. A. Hossain — Journal of King Saud University - Computer and Information Sciences, vol. 36, no. 8, p. 102191, September 2024</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.1016/j.jksuci.2024.102191" target="_blank">DOI</a>
       </div>
     </li>
   </ul>
@@ -590,25 +583,34 @@ redirect_from:
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">An Embedded Real-time Object Alert System for Visually Impaired: A Monocular Depth Estimation based Approach through Computer Vision</div>
+          <div class="publication-title">An Embedded Real-time Object Alert System for Visually Impaired: A Monocular Depth Estimation based Approach through Computer Vision <a class="doi-button" href="https://doi.org/10.48550/arXiv.2507.08165" target="_blank">arXiv</a></div>
           <p class="publication-meta"><strong>J. Anjom</strong>, R. I. Chowdhury, T. Hasan, and Md. I. A. Hossain — Accepted at 2025 IEEE International Conference on Advanced Computing Technologies (ICoACT-2025)</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.48550/arXiv.2507.08165" target="_blank">arXiv</a>
       </div>
     </li>
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">Diabetic Retinopathy Detection Using a Lightweight Edge Intelligence‑based Technique</div>
+          <div class="publication-title">Diabetic Retinopathy Detection Using a Lightweight Edge Intelligence‑based Technique <a class="doi-button" href="https://doi.org/10.1109/BECITHCON64160.2024.10962647" target="_blank">DOI</a></div>
           <p class="publication-meta">M. N. Mantaqa, <strong>J. Anjom</strong>, and Md. I. A. Hossain — 2024 IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON 2024), November 2024</p>
         </div>
-        <a class="doi-button" href="https://doi.org/10.1109/BECITHCON64160.2024.10962647" target="_blank">DOI</a>
+      </div>
+    </li>
+  </ul>
+  
+  <h3>Thesis</h3>
+  <ul class="publication-list">
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">Thesis Title <a class="doi-button" href="https://doi.org/10.13140/RG.2.2.12458.17602" target="_blank">DOI</a></div>
+        </div>
       </div>
     </li>
   </ul>
 </div>
 
 <!-- Footer -->
-<div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.9em;">
+<div style="text-align: center; margin-top: 20px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.9em;">
   <p>Last updated: June 2026</p>
 </div></div></div>
