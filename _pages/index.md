@@ -603,7 +603,8 @@ redirect_from:
     <li>
       <div class="publication-ref">
         <div>
-          <div class="publication-title">Thesis Title <a class="doi-button" href="https://doi.org/10.13140/RG.2.2.12458.17602" target="_blank">DOI</a></div>
+          <div class="publication-title">Visualization of Sorting Algorithms on a Mobile Application - A Study on Traditional vs Interactive Digital Tools <a class="doi-button" href="https://doi.org/10.13140/RG.2.2.12458.17602" target="_blank">DOI</a></div>
+          <p class="publication-meta"><strong>J. Anjom</strong>, Tahiya Tasneem Oishee, and Uzma Mohammed — CSE499 Capstone Project, North South University, Bangladesh, December 2024</p>
         </div>
       </div>
     </li>
