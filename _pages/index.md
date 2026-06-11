@@ -9,6 +9,8 @@ redirect_from:
   - /about.html
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
   html {
     scroll-behavior: smooth;
@@ -16,7 +18,7 @@ redirect_from:
   
   .page-shell {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 40px;
     align-items: start;
   }
@@ -38,9 +40,9 @@ redirect_from:
   }
   
   .profile-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 240px;
+    height: 320px;
+    border-radius: 8px;
     margin: 0 auto 24px;
     background-color: #f5f7fb;
     display: flex;
@@ -118,6 +120,10 @@ redirect_from:
   
   .profile-link-button.linkedin {
     background-color: #0077B5;
+  }
+  
+  .profile-link-button.cv {
+    background-color: #e74c3c;
   }
   
   .profile-summary {
@@ -368,8 +374,8 @@ redirect_from:
     }
     
     .profile-image {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 240px;
     }
   }
 </style>
@@ -389,10 +395,11 @@ redirect_from:
       <li class="profile-email">jareenanjom02@gmail.com</li>
     </ul>
     <div class="profile-links">
-      <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><span class="profile-link-icon">📚</span>Scholar</a>
-      <a class="profile-link-button orcid" href="https://orcid.org/0009-0003-9091-9992" target="_blank"><span class="profile-link-icon">Ⓞ</span>ORCID</a>
-      <a class="profile-link-button github" href="https://github.com/jareenanjom" target="_blank"><span class="profile-link-icon">🐙</span>GitHub</a>
-      <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareen-anjom/" target="_blank"><span class="profile-link-icon">in</span>LinkedIn</a>
+      <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><i class="fas fa-book"></i>Scholar</a>
+      <a class="profile-link-button orcid" href="https://orcid.org/0009-0003-9091-9992" target="_blank"><i class="fab fa-orcid"></i>ORCID</a>
+      <a class="profile-link-button github" href="https://github.com/jareenanjom" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareen-anjom/" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+      <a class="profile-link-button cv" href="/files/Jareen_Anjom_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i>CV</a>
     </div>
   </aside>
   <div class="page-content">
@@ -411,20 +418,16 @@ redirect_from:
   <h2>What's New</h2>
   <ul class="what-new-list">
     <li>
-      <span class="what-new-date">11 June, 2026</span>
-      <span>Started a new research assistant role at Kuwait University focused on real-time heat stress prediction with wearable sensing.</span>
+      <span class="what-new-date">June, 2026</span>
+      <span>Appointed RA at Kuwait University for a new project: <i>"Modeling Ultrasound Waves using Physics-Informed ResNet Approximators"</i> (Grant ZF01/25)</span>
     </li>
     <li>
-      <span class="what-new-date">1 May, 2026</span>
-      <span>Joined Fidelity Technologies as an AI Specialist to build on-premise assistants using lightweight LLMs and RAG pipelines.</span>
+      <span class="what-new-date">January, 2026</span>
+      <span>Q1 Publication now online: <i>"SatNet-B3: A Lightweight Deep Edge Intelligence Framework for Satellite Imagery Classification"</i> in <i>Future Internet</i>, <a href="https://doi.org/10.3390/fi17120579" target="_blank">doi: 10.3390/fi17120579</a></span>
     </li>
     <li>
-      <span class="what-new-date">15 March, 2026</span>
-      <span>Accepted paper at ICoACT-2025 on embedded object alert systems for visually impaired users.</span>
-    </li>
-    <li>
-      <span class="what-new-date">20 January, 2026</span>
-      <span>Graduated Summa Cum Laude from North South University, ranking in the top 5% of the class.</span>
+      <span class="what-new-date">November, 2025</span>
+      <span><a href="https://kicls.ku.edu.kw/" target="_blank">KICLS'25</a>: Presentation of <i>"Pulse of the Campus: Real-Time Health Tracking with Bangle.js 2"</i></span>
     </li>
   </ul>
 </div>
@@ -436,7 +439,7 @@ redirect_from:
   
   <h3>Deep Learning for Healthcare</h3>
   <p>
-    I focus on leveraging deep learning models for medical and physiological data analysis, with direct applications in disease detection, health risk prediction, and continuous monitoring systems. This includes work on respiratory disease detection from sensor data and heat stress prediction in real-time wearable systems, enabling early intervention and personalized healthcare solutions.
+    I focus on leveraging deep learning models for medical and physiological data analysis, with direct applications in disease detection, health risk prediction, and continuous monitoring systems. This includes work on respiratory disease detection from spectrograms (sequential cough sounds) and heat stress prediction in real-time wearable systems, enabling early intervention and personalized healthcare solutions.
   </p>
   
   <h3>Edge Intelligence</h3>
@@ -448,6 +451,70 @@ redirect_from:
   <p>
     Designing real-time perception systems that include object detection, semantic segmentation, and depth estimation to enhance mobility and navigation for visually impaired users. I'm developing embedded systems that provide tactile and auditory feedback for safer footpath navigation and enhanced environmental awareness on Bangladeshi roads and similar contexts.
   </p>
+</div>
+
+<!-- Experience Section -->
+<div id="experience" class="nav-anchor"></div>
+<div class="section">
+  <h2>Experience</h2>
+  
+  <h3>Industry</h3>
+  <div class="experience-item">
+    <div class="position-title">AI Specialist</div>
+    <div class="position-org">Fidelity Technologies, Kuwait | May 2025 – Present</div>
+    <ul class="position-bullets">
+      <li>Develop and maintain on-premise AI assistants using lightweight LLMs, HuggingFace models, Ollama, Retrieval-Augmented Generation (RAG), and intelligent agent frameworks.</li>
+      <li>Integrate AI solutions into enterprise workflows and content management systems.</li>
+      <li>Design predictive machine learning solutions and automation pipelines for business applications.</li>
+    </ul>
+  </div>
+  
+  <h3>Research</h3>
+  <div class="experience-item">
+    <div class="position-title">Research Assistant</div>
+    <div class="position-org">Kuwait University, Kuwait | June 2025 – Present</div>
+    <p>Conducting research in machine learning, healthcare AI, wearable sensing, and scientific machine learning under multiple funded research initiatives.</p>
+    <div class="position-meta"><strong>Project 1: Heat Stress Prediction using Wearable Sensors</strong></div>
+    <ul class="position-bullets">
+      <li>Develop machine learning models for real-time heat stress prediction using physiological and environmental data collected from Bangle.js 2 wearable devices.</li>
+      <li>Investigate the relationship between environmental conditions, physiological responses, and heat-related risks in hot-arid climates.</li>
+      <li>Conduct literature reviews and contribute to manuscript preparation for journal and conference publications.</li>
+      <li>An initial abstract based on this work was presented at the Kuwait International Conference on Life Sciences (KICLS 2025).</li>
+    </ul>
+    <div class="position-meta"><strong>Project 2: Modeling Ultrasound Waves using Physics-Informed ResNet Approximators</strong></div>
+    <p><em>Research Grant: ZF01/25 | June 2026 – Present</em></p>
+    <ul class="position-bullets">
+      <li>Develop Physics-Informed Neural Networks (PINNs) and ResNet-based surrogate models for ultrasound wave propagation governed by partial differential equations (PDEs).</li>
+      <li>Benchmark deep learning approximators against traditional Finite Difference Method (FDM) simulations.</li>
+      <li>Extend modeling approaches toward realistic skull-image domains for biomedical ultrasound applications.</li>
+      <li>Develop reproducible machine learning workflows using Python, PyTorch, TensorFlow, version control systems, and containerized environments.</li>
+      <li>Assist in experiment design, result analysis, visualization, and scientific publication preparation.</li>
+    </ul>
+  </div>
+  
+  <div class="experience-item">
+    <div class="position-title">Research Assistant</div>
+    <div class="position-org">North South University, Bangladesh | January 2024 – January 2025</div>
+    <p><strong>Research Grant:</strong> CTRG-23-SEPS-29</p>
+    <ul class="position-bullets">
+      <li>Conducted research in computer vision and deep edge intelligence.</li>
+      <li>Designed, trained, and optimized deep learning models for deployment on resource-constrained devices.</li>
+      <li>Contributed to research projects in healthcare AI, assistive technologies, satellite imagery analysis, and computer vision applications.</li>
+      <li>Participated in manuscript preparation and publication of peer-reviewed research articles.</li>
+    </ul>
+  </div>
+  
+  <h3>Teaching</h3>
+  <div class="experience-item">
+    <div class="position-title">Teaching Assistant</div>
+    <div class="position-org">CSE311: Database Management Systems</div>
+    <div class="position-org">North South University, Bangladesh | June 2023 – December 2024</div>
+    <ul class="position-bullets">
+      <li>Assisted in teaching SQL and database management concepts.</li>
+      <li>Evaluated assignments, projects, and laboratory work.</li>
+      <li>Conducted tutorial sessions and provided academic support to undergraduate students.</li>
+    </ul>
+  </div>
 </div>
 
 <!-- Publications Section -->
@@ -518,84 +585,9 @@ redirect_from:
   </ul>
 </div>
 
-<!-- Experience Section -->
-<div id="experience" class="nav-anchor"></div>
-<div class="section">
-  <h2>Experience</h2>
-  
-  <div class="experience-item">
-    <div class="position-title">AI Specialist</div>
-    <div class="position-org">Fidelity Technologies, Kuwait | May 2025 – Present</div>
-    <ul class="position-bullets">
-      <li>Develop and maintain on-premise AI assistants using lightweight LLMs, HuggingFace models, Ollama, Retrieval-Augmented Generation (RAG), and intelligent agent frameworks.</li>
-      <li>Integrate AI solutions into enterprise workflows and content management systems.</li>
-      <li>Design predictive machine learning solutions and automation pipelines for business applications.</li>
-    </ul>
-  </div>
-  
-  <div class="experience-item">
-    <div class="position-title">Research Assistant</div>
-    <div class="position-org">Kuwait University, Kuwait | June 2025 – Present</div>
-    <p>Conducting research in machine learning, healthcare AI, wearable sensing, and scientific machine learning under multiple funded research initiatives.</p>
-    <div class="position-meta"><strong>Project 1: Heat Stress Prediction using Wearable Sensors</strong></div>
-    <ul class="position-bullets">
-      <li>Develop machine learning models for real-time heat stress prediction using physiological and environmental data collected from Bangle.js 2 wearable devices.</li>
-      <li>Investigate the relationship between environmental conditions, physiological responses, and heat-related risks in hot-arid climates.</li>
-      <li>Conduct literature reviews and contribute to manuscript preparation for journal and conference publications.</li>
-      <li>An initial abstract based on this work was presented at the Kuwait International Conference on Life Sciences (KICLS 2025).</li>
-    </ul>
-    <div class="position-meta"><strong>Project 2: Modeling Ultrasound Waves using Physics-Informed ResNet Approximators</strong></div>
-    <p><em>Research Grant: ZF01/25 | June 2026 – Present</em></p>
-    <ul class="position-bullets">
-      <li>Develop Physics-Informed Neural Networks (PINNs) and ResNet-based surrogate models for ultrasound wave propagation governed by partial differential equations (PDEs).</li>
-      <li>Benchmark deep learning approximators against traditional Finite Difference Method (FDM) simulations.</li>
-      <li>Extend modeling approaches toward realistic skull-image domains for biomedical ultrasound applications.</li>
-      <li>Develop reproducible machine learning workflows using Python, PyTorch, TensorFlow, version control systems, and containerized environments.</li>
-      <li>Assist in experiment design, result analysis, visualization, and scientific publication preparation.</li>
-    </ul>
-  </div>
-  
-  <div class="experience-item">
-    <div class="position-title">Research Assistant</div>
-    <div class="position-org">North South University, Bangladesh | January 2024 – January 2025</div>
-    <p><strong>Research Grant:</strong> CTRG-23-SEPS-29</p>
-    <ul class="position-bullets">
-      <li>Conducted research in computer vision and deep edge intelligence.</li>
-      <li>Designed, trained, and optimized deep learning models for deployment on resource-constrained devices.</li>
-      <li>Contributed to research projects in healthcare AI, assistive technologies, satellite imagery analysis, and computer vision applications.</li>
-      <li>Participated in manuscript preparation and publication of peer-reviewed research articles.</li>
-    </ul>
-  </div>
-  
-  <div class="experience-item">
-    <div class="position-title">Teaching Assistant</div>
-    <div class="position-org">CSE311: Database Management Systems</div>
-    <div class="position-org">North South University, Bangladesh | June 2023 – December 2024</div>
-    <ul class="position-bullets">
-      <li>Assisted in teaching SQL and database management concepts.</li>
-      <li>Evaluated assignments, projects, and laboratory work.</li>
-      <li>Conducted tutorial sessions and provided academic support to undergraduate students.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Teaching Section -->
-<div id="teaching" class="nav-anchor"></div>
-<div class="section">
-  <h2>Teaching & Mentoring</h2>
-  
-  <h3>Database Management System (CSE311)</h3>
-  <p>
-    Teaching Assistant at North South University, Bangladesh (June 2023 – December 2024). Assessed SQL and MS-SQL projects and assignments, providing detailed feedback to students. Conducted regular tutorial sessions offering additional support and guidance to students outside formal class hours, helping them master relational database design, query optimization, and best practices.
-  </p>
-</div>
-
 <!-- Footer -->
 <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.9em;">
-  <p>
-    Last updated: June 2026 | 
-    <a href="/files/Jareen_Anjom_CV.pdf" style="color: #007bff; text-decoration: none;">Download Full CV</a>
-  </p>
+  <p>Last updated: June 2026</p>
 </div>
   </div>
 </div>
