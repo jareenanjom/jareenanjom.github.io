@@ -69,6 +69,36 @@
             color: #007bff;
         }
         
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
         main {
             width: 100%;
             max-width: none;
@@ -80,21 +110,42 @@
         
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                height: auto;
-                padding: 15px 20px;
+                flex-direction: row;
+                height: 60px;
+                padding: 0 20px;
+            }
+            
+            .hamburger {
+                display: flex;
             }
             
             .nav-menu {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
                 flex-direction: column;
-                gap: 10px;
-                margin-top: 15px;
-                width: 100%;
+                gap: 0;
+                background-color: #fff;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 15px 20px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .nav-menu.active {
+                max-height: 300px;
             }
             
             .nav-menu a {
                 display: block;
-                padding: 8px 0;
+                padding: 12px 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .nav-menu a:last-child {
+                border-bottom: none;
             }
         }
     </style>
@@ -103,7 +154,12 @@
     <header>
         <nav>
             <a href="/" class="site-title">{{ site.title }}</a>
-            <ul class="nav-menu">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 {% for item in site.data.navigation.main %}
                     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                 {% endfor %}
@@ -116,6 +172,23 @@
     </main>
     
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

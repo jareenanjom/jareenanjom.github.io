@@ -18,7 +18,7 @@ redirect_from:
   
   .page-shell {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 360px 1fr;
     gap: 40px;
     align-items: start;
   }
@@ -83,7 +83,7 @@ redirect_from:
   
   .profile-links {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
   
@@ -99,6 +99,7 @@ redirect_from:
     font-weight: 600;
     text-decoration: none;
     min-height: 38px;
+    transition: background-color 0.3s ease;
   }
   
   .profile-link-icon {
@@ -109,21 +110,41 @@ redirect_from:
     background-color: #4285f4;
   }
   
+  .profile-link-button.scholar:hover {
+    background-color: #5B9FFF;
+  }
+  
   .profile-link-button.orcid {
     background-color: #A6CE39;
     color: #111;
+  }
+  
+  .profile-link-button.orcid:hover {
+    background-color: #B8D85D;
   }
   
   .profile-link-button.github {
     background-color: #171515;
   }
   
+  .profile-link-button.github:hover {
+    background-color: #3A3A38;
+  }
+  
   .profile-link-button.linkedin {
     background-color: #0077B5;
   }
   
+  .profile-link-button.linkedin:hover {
+    background-color: #1E90FF;
+  }
+  
   .profile-link-button.cv {
     background-color: #e74c3c;
+  }
+  
+  .profile-link-button.cv:hover {
+    background-color: #EC6C52;
   }
   
   .profile-summary {
@@ -257,14 +278,14 @@ redirect_from:
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 80px;
-    padding: 8px 12px;
+    padding: 5px 10px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.88em;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    font-size: 0.80em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
   }
   
   .doi-button:hover {
@@ -385,7 +406,7 @@ redirect_from:
   <aside class="profile-sidebar">
     <div id="home" class="nav-anchor"></div>
     <div class="profile-image">
-      Portrait (upload PNG later)
+      <img src="/assets/images/Profile-Picture1.png" alt="Jareen Anjom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
     </div>
     <h1>Jareen Anjom</h1>
     <ul class="profile-meta">
@@ -395,7 +416,7 @@ redirect_from:
       <li class="profile-email">jareenanjom02@gmail.com</li>
     </ul>
     <div class="profile-links">
-      <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><i class="fas fa-book"></i>Scholar</a>
+      <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
       <a class="profile-link-button orcid" href="https://orcid.org/0009-0003-9091-9992" target="_blank"><i class="fab fa-orcid"></i>ORCID</a>
       <a class="profile-link-button github" href="https://github.com/jareenanjom" target="_blank"><i class="fab fa-github"></i>GitHub</a>
       <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareen-anjom/" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
@@ -407,7 +428,7 @@ redirect_from:
 <!-- About Me Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p><strong>I am Jareen Anjom</strong>, an <strong>AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
+  <p><strong>I am an <strong>AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
   <p>Currently, I contribute to both industry and academic research, developing <strong>AI-driven solutions</strong> for real-world applications while conducting research in <strong>healthcare AI</strong> and <strong>scientific machine learning</strong>. My work spans <strong>wearable sensing</strong>, <strong>computer vision</strong>, <strong>edge intelligence</strong>, and <strong>physics-informed learning</strong>, with the goal of creating intelligent systems that are both <strong>impactful</strong> and <strong>deployable</strong>.</p>
   <p>I received my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>North South University, Bangladesh</strong>, graduating <strong>Summa Cum Laude</strong> and ranking among the <strong>top 5%</strong> of my graduating class. My research has resulted in <strong>peer-reviewed publications</strong> in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
   <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
