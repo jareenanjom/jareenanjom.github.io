@@ -37,12 +37,6 @@ redirect_from:
     color: #1f2937;
   }
   
-  .profile-role {
-    margin-bottom: 18px;
-    color: #4b5563;
-    font-size: 1.05em;
-  }
-  
   .profile-image {
     width: 220px;
     height: 220px;
@@ -55,6 +49,75 @@ redirect_from:
     font-size: 14px;
     color: #9ca3af;
     border: 2px solid #e5e7eb;
+  }
+  
+  .profile-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    color: #374151;
+    font-size: 0.97em;
+    line-height: 1.8;
+  }
+  
+  .profile-meta li {
+    margin-bottom: 12px;
+  }
+  
+  .profile-meta a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  
+  .profile-meta a:hover {
+    text-decoration: underline;
+  }
+  
+  .profile-email {
+    font-size: 0.95em;
+    color: #1f2937;
+    word-break: break-all;
+  }
+  
+  .profile-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+  
+  .profile-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.82em;
+    font-weight: 600;
+    text-decoration: none;
+    min-height: 38px;
+  }
+  
+  .profile-link-icon {
+    font-size: 1em;
+  }
+  
+  .profile-link-button.scholar {
+    background-color: #4285f4;
+  }
+  
+  .profile-link-button.orcid {
+    background-color: #A6CE39;
+    color: #111;
+  }
+  
+  .profile-link-button.github {
+    background-color: #171515;
+  }
+  
+  .profile-link-button.linkedin {
+    background-color: #0077B5;
   }
   
   .profile-summary {
@@ -319,21 +382,17 @@ redirect_from:
       Portrait (upload PNG later)
     </div>
     <h1>Jareen Anjom</h1>
-    <p class="profile-role">AI Researcher | Deep Learning Specialist</p>
-    <p class="profile-summary">
-      I build AI systems for healthcare, wearable sensing, and intelligent enterprise applications using lightweight models, edge intelligence, and modern ML toolchains.
-    </p>
     <ul class="profile-meta">
       <li>Kuwait City, Kuwait</li>
-      <li>AI Specialist at Fidelity Technologies</li>
-      <li>Research Assistant at Kuwait University</li>
-      <li>Deep Learning • Edge AI • Computer Vision</li>
+      <li><a href="https://www.fidelity-technologies.com" target="_blank"><strong>AI Specialist</strong> at Fidelity Technologies</a></li>
+      <li><a href="https://www.ku.edu.kw" target="_blank"><strong>Research Assistant</strong> at Kuwait University</a></li>
+      <li class="profile-email">jareenanjom02@gmail.com</li>
     </ul>
     <div class="profile-links">
-      <a href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank">Google Scholar</a>
-      <a href="https://orcid.org/0009-0003-9091-9992" target="_blank">ORCID</a>
-      <a href="https://github.com/jareenanjom" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jareen-anjom/" target="_blank">LinkedIn</a>
+      <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><span class="profile-link-icon">📚</span>Scholar</a>
+      <a class="profile-link-button orcid" href="https://orcid.org/0009-0003-9091-9992" target="_blank"><span class="profile-link-icon">Ⓞ</span>ORCID</a>
+      <a class="profile-link-button github" href="https://github.com/jareenanjom" target="_blank"><span class="profile-link-icon">🐙</span>GitHub</a>
+      <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareen-anjom/" target="_blank"><span class="profile-link-icon">in</span>LinkedIn</a>
     </div>
   </aside>
   <div class="page-content">
@@ -341,10 +400,10 @@ redirect_from:
 <!-- About Me Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p>I am Jareen Anjom, an AI Specialist at Fidelity Technologies and a Research Assistant at Kuwait University. My research interests lie at the intersection of Deep Learning, Healthcare AI, Wearable Computing, Assistive Technologies, Satellite Imagery Analysis, and Edge Intelligence, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
-  <p>Currently, I contribute to both industry and academic research, developing AI-driven solutions for real-world applications while conducting research in healthcare AI and scientific machine learning. My work spans wearable sensing, computer vision, edge intelligence, and physics-informed learning, with the goal of creating intelligent systems that are both impactful and deployable.</p>
-  <p>I received my B.Sc. in Computer Science and Engineering from North South University, Bangladesh, graduating Summa Cum Laude and ranking among the top 5% of my graduating class. My research has resulted in peer-reviewed publications in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
-  <p>I am currently seeking PhD opportunities and research collaborations aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
+  <p><strong>I am Jareen Anjom</strong>, an <strong>AI Specialist</strong> at <strong>Fidelity Technologies</strong> and a <strong>Research Assistant</strong> at <strong>Kuwait University</strong>. My research interests lie at the intersection of <strong>Deep Learning</strong>, <strong>Healthcare AI</strong>, <strong>Wearable Computing</strong>, <strong>Assistive Technologies</strong>, <strong>Satellite Imagery Analysis</strong>, and <strong>Edge Intelligence</strong>, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
+  <p>Currently, I contribute to both industry and academic research, developing <strong>AI-driven solutions</strong> for real-world applications while conducting research in <strong>healthcare AI</strong> and <strong>scientific machine learning</strong>. My work spans <strong>wearable sensing</strong>, <strong>computer vision</strong>, <strong>edge intelligence</strong>, and <strong>physics-informed learning</strong>, with the goal of creating intelligent systems that are both <strong>impactful</strong> and <strong>deployable</strong>.</p>
+  <p>I received my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>North South University, Bangladesh</strong>, graduating <strong>Summa Cum Laude</strong> and ranking among the <strong>top 5%</strong> of my graduating class. My research has resulted in <strong>peer-reviewed publications</strong> in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
+  <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
 </div>
 
 <!-- What's New Section -->
