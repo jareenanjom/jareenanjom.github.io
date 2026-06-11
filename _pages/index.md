@@ -406,7 +406,7 @@ redirect_from:
   <aside class="profile-sidebar">
     <div id="home" class="nav-anchor"></div>
     <div class="profile-image">
-      <img src="/assets/images/Profile-Picture1.png" alt="Jareen Anjom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none';">
+      <img src="/images/Profile-Picture1.png" alt="Jareen Anjom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
     </div>
     <h1>Jareen Anjom</h1>
     <ul class="profile-meta">
@@ -419,8 +419,7 @@ redirect_from:
       <a class="profile-link-button scholar" href="https://scholar.google.com/citations?user=1hBBLEkAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
       <a class="profile-link-button orcid" href="https://orcid.org/0009-0003-9091-9992" target="_blank"><i class="fab fa-orcid"></i>ORCID</a>
       <a class="profile-link-button github" href="https://github.com/jareenanjom" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-      <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareen-anjom/" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-      <a class="profile-link-button cv" href="/files/Jareen_Anjom_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i>CV</a>
+      <a class="profile-link-button linkedin" href="https://www.linkedin.com/in/jareenanjom/" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
     </div>
   </aside>
   <div class="page-content">
@@ -432,6 +431,9 @@ redirect_from:
   <p>Currently, I contribute to both industry and academic research, developing <strong>AI-driven solutions</strong> for real-world applications while conducting research in <strong>healthcare AI</strong> and <strong>scientific machine learning</strong>. My work spans <strong>wearable sensing</strong>, <strong>computer vision</strong>, <strong>edge intelligence</strong>, and <strong>physics-informed learning</strong>, with the goal of creating intelligent systems that are both <strong>impactful</strong> and <strong>deployable</strong>.</p>
   <p>I received my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>North South University, Bangladesh</strong>, graduating <strong>Summa Cum Laude</strong> and ranking among the <strong>top 5%</strong> of my graduating class. My research has resulted in <strong>peer-reviewed publications</strong> in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
   <p>I am currently seeking <strong>PhD opportunities</strong> and <strong>research collaborations</strong> aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
+  <div style="text-align: center; margin-top: 20px;">
+    <a class="profile-link-button cv" href="/files/Jareen_Anjom_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i>CV</a>
+  </div>
 </div>
 
 <!-- What's New Section -->
@@ -470,7 +472,7 @@ redirect_from:
   
   <h3>Computer Vision for Assistive Technologies</h3>
   <p>
-    Designing real-time perception systems that include object detection, semantic segmentation, and depth estimation to enhance mobility and navigation for visually impaired users. I'm developing embedded systems that provide tactile and auditory feedback for safer footpath navigation and enhanced environmental awareness on Bangladeshi roads and similar contexts.
+    Designing real-time perception systems that include object detection, semantic segmentation, and depth estimation to enhance mobility and navigation for visually impaired users. On-device models on smartphones were developed that provide tactile and auditory feedback for safer footpath navigation and enhanced environmental awareness on Bangladeshi roads and similar contexts.
   </p>
 </div>
 
