@@ -123,6 +123,85 @@ redirect_from:
     color: #444;
   }
   
+  .what-new-list,
+  .publication-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .what-new-list li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edeff2;
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.96em;
+  }
+  
+  .what-new-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .what-new-date {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 0.95em;
+  }
+  
+  .publication-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edeff2;
+    color: #444;
+    font-size: 0.95em;
+  }
+  
+  .publication-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .publication-ref {
+    max-width: calc(100% - 100px);
+  }
+  
+  .publication-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 0.98em;
+    color: #1f2937;
+  }
+  
+  .publication-meta {
+    margin: 0;
+    font-size: 0.92em;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .doi-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.88em;
+    transition: background-color 0.3s;
+  }
+  
+  .doi-button:hover {
+    background-color: #0056b3;
+  }
+  
   .what-new-item,
   .publication-item,
   .experience-item {
@@ -134,18 +213,6 @@ redirect_from:
   
   .what-new-item {
     border-left: 4px solid #007bff;
-  }
-  
-  .what-new-date {
-    font-weight: bold;
-    color: #007bff;
-    font-size: 14px;
-  }
-  
-  .what-new-text {
-    margin-top: 10px;
-    line-height: 1.6;
-    color: #555;
   }
   
   .publication-title {
@@ -271,37 +338,36 @@ redirect_from:
   </aside>
   <div class="page-content">
 
+<!-- About Me Section -->
+<div class="section">
+  <h2>About Me</h2>
+  <p>I am Jareen Anjom, an AI Specialist at Fidelity Technologies and a Research Assistant at Kuwait University. My research interests lie at the intersection of Deep Learning, Healthcare AI, Wearable Computing, Assistive Technologies, Satellite Imagery Analysis, and Edge Intelligence, with a particular focus on developing efficient machine learning systems for resource-constrained devices.</p>
+  <p>Currently, I contribute to both industry and academic research, developing AI-driven solutions for real-world applications while conducting research in healthcare AI and scientific machine learning. My work spans wearable sensing, computer vision, edge intelligence, and physics-informed learning, with the goal of creating intelligent systems that are both impactful and deployable.</p>
+  <p>I received my B.Sc. in Computer Science and Engineering from North South University, Bangladesh, graduating Summa Cum Laude and ranking among the top 5% of my graduating class. My research has resulted in peer-reviewed publications in healthcare AI, assistive technologies, computer vision, satellite imagery analysis, and edge intelligence.</p>
+  <p>I am currently seeking PhD opportunities and research collaborations aligned with my interests in artificial intelligence, healthcare technologies, edge intelligence, and scientific machine learning.</p>
+</div>
+
 <!-- What's New Section -->
 <div class="section">
   <h2>What's New</h2>
-  
-  <div class="what-new-item">
-    <div class="what-new-date">11 June, 2026</div>
-    <div class="what-new-text">
-      New research assistant position at Kuwait University focusing on real-time heat stress prediction using machine learning and wearable sensor data.
-    </div>
-  </div>
-  
-  <div class="what-new-item">
-    <div class="what-new-date">1 May, 2026</div>
-    <div class="what-new-text">
-      Started as AI Specialist at Fidelity Technologies, developing on-premise company AI assistant using lightweight LLMs and RAG pipelines.
-    </div>
-  </div>
-  
-  <div class="what-new-item">
-    <div class="what-new-date">15 March, 2026</div>
-    <div class="what-new-text">
-      Paper accepted at 2025 IEEE International Conference on Advanced Computing Technologies (ICoACT-2025) on embedded real-time object alert systems for visually impaired users.
-    </div>
-  </div>
-  
-  <div class="what-new-item">
-    <div class="what-new-date">20 January, 2026</div>
-    <div class="what-new-text">
-      Completed BSc in Computer Science and Engineering with summa cum laude honors at North South University, Bangladesh (CGPA: 3.84/4).
-    </div>
-  </div>
+  <ul class="what-new-list">
+    <li>
+      <span class="what-new-date">11 June, 2026</span>
+      <span>Started a new research assistant role at Kuwait University focused on real-time heat stress prediction with wearable sensing.</span>
+    </li>
+    <li>
+      <span class="what-new-date">1 May, 2026</span>
+      <span>Joined Fidelity Technologies as an AI Specialist to build on-premise assistants using lightweight LLMs and RAG pipelines.</span>
+    </li>
+    <li>
+      <span class="what-new-date">15 March, 2026</span>
+      <span>Accepted paper at ICoACT-2025 on embedded object alert systems for visually impaired users.</span>
+    </li>
+    <li>
+      <span class="what-new-date">20 January, 2026</span>
+      <span>Graduated Summa Cum Laude from North South University, ranking in the top 5% of the class.</span>
+    </li>
+  </ul>
 </div>
 
 <!-- About / Research Background Section -->
@@ -331,86 +397,66 @@ redirect_from:
   <h2>Publications</h2>
   
   <h3>Journal Articles</h3>
-  
-  <div class="publication-item">
-    <div class="publication-title">SatNet-B3: A Lightweight Deep Edge Intelligence Framework for Satellite Imagery Classification</div>
-    <div class="publication-meta">
-      T. Hasan, <strong>J. Anjom</strong>, Md. I. A. Hossain, and Z. U. Shamszaman
-    </div>
-    <div class="publication-meta">
-      Future Internet, vol. 17, no. 12, p. 579, December 2025
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.3390/fi17120579" target="_blank">DOI</a>
-    </div>
-  </div>
-  
-  <div class="publication-item">
-    <div class="publication-title">Towards Walkable Footpath Detection for the Visually Impaired on Bangladeshi Roads with Smartphones Using Deep Edge Intelligence</div>
-    <div class="publication-meta">
-      Md. I. A. Hossain, <strong>J. Anjom</strong>, and R. I. Chowdhury
-    </div>
-    <div class="publication-meta">
-      Array, July 2025
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.1016/j.array.2025.100353" target="_blank">DOI</a>
-    </div>
-  </div>
-  
-  <div class="publication-item">
-    <div class="publication-title">Leveraging deep edge intelligence for real-time respiratory disease detection</div>
-    <div class="publication-meta">
-      T. T. Oishee, <strong>J. Anjom</strong>, U. Mohammed, and Md. I. A. Hossain
-    </div>
-    <div class="publication-meta">
-      Clinical eHealth, January 2025
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.1016/j.ceh.2025.01.001" target="_blank">DOI</a>
-    </div>
-  </div>
-  
-  <div class="publication-item">
-    <div class="publication-title">A Novel Edge Intelligence-based Solution for Safer Footpath Navigation of Visually Impaired Using Computer Vision</div>
-    <div class="publication-meta">
-      R. I. Chowdhury, <strong>J. Anjom</strong>, and Md. I. A. Hossain
-    </div>
-    <div class="publication-meta">
-      Journal of King Saud University - Computer and Information Sciences, vol. 36, no. 8, p. 102191, September 2024
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.1016/j.jksuci.2024.102191" target="_blank">DOI</a>
-    </div>
-  </div>
+  <ul class="publication-list">
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">SatNet-B3: A Lightweight Deep Edge Intelligence Framework for Satellite Imagery Classification</div>
+          <p class="publication-meta">T. Hasan, <strong>J. Anjom</strong>, Md. I. A. Hossain, and Z. U. Shamszaman — Future Internet, vol. 17, no. 12, p. 579, December 2025</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.3390/fi17120579" target="_blank">DOI</a>
+      </div>
+    </li>
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">Towards Walkable Footpath Detection for the Visually Impaired on Bangladeshi Roads with Smartphones Using Deep Edge Intelligence</div>
+          <p class="publication-meta">Md. I. A. Hossain, <strong>J. Anjom</strong>, and R. I. Chowdhury — Array, July 2025</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.1016/j.array.2025.100353" target="_blank">DOI</a>
+      </div>
+    </li>
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">Leveraging deep edge intelligence for real-time respiratory disease detection</div>
+          <p class="publication-meta">T. T. Oishee, <strong>J. Anjom</strong>, U. Mohammed, and Md. I. A. Hossain — Clinical eHealth, January 2025</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.1016/j.ceh.2025.01.001" target="_blank">DOI</a>
+      </div>
+    </li>
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">A Novel Edge Intelligence-based Solution for Safer Footpath Navigation of Visually Impaired Using Computer Vision</div>
+          <p class="publication-meta">R. I. Chowdhury, <strong>J. Anjom</strong>, and Md. I. A. Hossain — Journal of King Saud University - Computer and Information Sciences, vol. 36, no. 8, p. 102191, September 2024</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.1016/j.jksuci.2024.102191" target="_blank">DOI</a>
+      </div>
+    </li>
+  </ul>
   
   <h3>Conference Proceedings</h3>
-  
-  <div class="publication-item">
-    <div class="publication-title">An Embedded Real-time Object Alert System for Visually Impaired: A Monocular Depth Estimation based Approach through Computer Vision</div>
-    <div class="publication-meta">
-      <strong>J. Anjom</strong>, R. I. Chowdhury, T. Hasan, and Md. I. A. Hossain
-    </div>
-    <div class="publication-meta">
-      Accepted at 2025 IEEE International Conference on Advanced Computing Technologies (ICoACT-2025)
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.48550/arXiv.2507.08165" target="_blank">arXiv</a>
-    </div>
-  </div>
-  
-  <div class="publication-item">
-    <div class="publication-title">Diabetic Retinopathy Detection Using a Lightweight Edge Intelligence‑based Technique</div>
-    <div class="publication-meta">
-      M. N. Mantaqa, <strong>J. Anjom</strong>, and Md. I. A. Hossain
-    </div>
-    <div class="publication-meta">
-      2024 IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON 2024), November 2024
-    </div>
-    <div class="publication-links">
-      <a href="https://doi.org/10.1109/BECITHCON64160.2024.10962647" target="_blank">DOI</a>
-    </div>
-  </div>
+  <ul class="publication-list">
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">An Embedded Real-time Object Alert System for Visually Impaired: A Monocular Depth Estimation based Approach through Computer Vision</div>
+          <p class="publication-meta"><strong>J. Anjom</strong>, R. I. Chowdhury, T. Hasan, and Md. I. A. Hossain — Accepted at 2025 IEEE International Conference on Advanced Computing Technologies (ICoACT-2025)</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.48550/arXiv.2507.08165" target="_blank">arXiv</a>
+      </div>
+    </li>
+    <li>
+      <div class="publication-ref">
+        <div>
+          <div class="publication-title">Diabetic Retinopathy Detection Using a Lightweight Edge Intelligence‑based Technique</div>
+          <p class="publication-meta">M. N. Mantaqa, <strong>J. Anjom</strong>, and Md. I. A. Hossain — 2024 IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON 2024), November 2024</p>
+        </div>
+        <a class="doi-button" href="https://doi.org/10.1109/BECITHCON64160.2024.10962647" target="_blank">DOI</a>
+      </div>
+    </li>
+  </ul>
 </div>
 
 <!-- Experience Section -->
