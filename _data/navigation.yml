@@ -3,8 +3,8 @@ main:
   - title: "Home"
     url: "#home"
     
-  - title: "About"
-    url: "#about"
+  - title: "Research"
+    url: "#research"
     
   - title: "Experience"
     url: "#experience"
