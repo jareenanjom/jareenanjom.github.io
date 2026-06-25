@@ -64,18 +64,6 @@ const observerNav = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observerNav.observe(section));
 
-const fadeElements = document.querySelectorAll('.fade-in');
-const observerFade = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observerFade.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-fadeElements.forEach((element) => observerFade.observe(element));
-
 const scrollBtn = document.getElementById('scrollTopBtn');
 
 window.addEventListener('scroll', () => {
@@ -84,6 +72,56 @@ window.addEventListener('scroll', () => {
 
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.querySelectorAll('.pub-carousel').forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll('img'));
+  if (slides.length < 2) {
+    return;
+  }
+
+  const dots = document.createElement('div');
+  dots.className = 'carousel-dots';
+  carousel.appendChild(dots);
+
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === 0);
+    slide.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
+
+    const dot = document.createElement('span');
+    dot.className = `carousel-dot${index === 0 ? ' active' : ''}`;
+    dots.appendChild(dot);
+  });
+
+  const dotItems = Array.from(dots.children);
+  let activeIndex = 0;
+  let timer;
+
+  function showSlide(index) {
+    activeIndex = index % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle('active', isActive);
+      slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      dotItems[slideIndex].classList.toggle('active', isActive);
+    });
+  }
+
+  function start() {
+    timer = window.setInterval(() => {
+      showSlide(activeIndex + 1);
+    }, 3600);
+  }
+
+  function stop() {
+    window.clearInterval(timer);
+  }
+
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+  carousel.addEventListener('focusin', stop);
+  carousel.addEventListener('focusout', start);
+  start();
 });
 
 const lightbox = document.getElementById('lightbox');
