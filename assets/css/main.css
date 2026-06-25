@@ -792,6 +792,7 @@ strong {
   font-size: 1.02rem;
   color: var(--text-primary);
   margin-bottom: 4px;
+  padding-right: 190px;
 }
 
 .position-org {
@@ -799,13 +800,20 @@ strong {
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 4px;
+  padding-right: 190px;
 }
 
 .position-dates {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  max-width: 170px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
   color: var(--text-tertiary);
-  margin-bottom: 12px;
+  line-height: 1.4;
+  margin-bottom: 0;
+  text-align: right;
 }
 
 .position-bullets {
@@ -1281,6 +1289,18 @@ strong {
 
   .experience-timeline::before {
     display: none;
+  }
+
+  .position-title,
+  .position-org {
+    padding-right: 0;
+  }
+
+  .position-dates {
+    position: static;
+    max-width: none;
+    margin-bottom: 12px;
+    text-align: left;
   }
 
   .experience-item::before {
