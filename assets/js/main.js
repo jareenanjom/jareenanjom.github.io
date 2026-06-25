@@ -46,23 +46,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-const sections = document.querySelectorAll('.nav-anchor');
 const navLinks = document.querySelectorAll('.nav-menu a');
+const navTargets = Array.from(navLinks)
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
 
-const observerNav = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      navLinks.forEach((link) => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${entry.target.id}`) {
-          link.classList.add('active');
-        }
-      });
+function updateActiveNav() {
+  const offset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64;
+  const scrollPosition = window.scrollY + offset + 24;
+  let activeId = navTargets[0]?.id;
+
+  navTargets.forEach((target) => {
+    if (target.offsetTop <= scrollPosition) {
+      activeId = target.id;
     }
   });
-}, { rootMargin: '-20% 0px -70% 0px' });
 
-sections.forEach((section) => observerNav.observe(section));
+  navLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+window.addEventListener('resize', updateActiveNav);
+updateActiveNav();
 
 const scrollBtn = document.getElementById('scrollTopBtn');
 
