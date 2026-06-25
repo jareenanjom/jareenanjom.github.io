@@ -1,8 +1,10 @@
-# Jareen Anjom — Personal Website (source)
+# Jareen Anjom - Personal Website
 
-This repository contains the source for my personal, single-page portfolio website built with Jekyll. It includes the site layout, styling, and content for my research background, publications, experience, and teaching.
+This repository contains a static single-page portfolio website. It does not require Jekyll, Ruby, Docker, or a build step.
 
-View the live site: https://www.jareenanjom.github.io
+View locally by opening `index.html` in a browser.
+
+View the live site: https://jareenanjom.github.io
 
 Contact
 
