@@ -1307,6 +1307,10 @@ strong {
     display: none;
   }
 
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+
   .pub-thumbnail {
     min-height: 0;
     height: 150px;
