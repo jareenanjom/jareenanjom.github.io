@@ -105,7 +105,7 @@ document.querySelectorAll('.pub-carousel').forEach((carousel) => {
   let timer;
 
   function showSlide(index) {
-    activeIndex = index % slides.length;
+    activeIndex = ((index % slides.length) + slides.length) % slides.length;
     slides.forEach((slide, slideIndex) => {
       const isActive = slideIndex === activeIndex;
       slide.classList.toggle('active', isActive);
@@ -124,6 +124,32 @@ document.querySelectorAll('.pub-carousel').forEach((carousel) => {
     window.clearInterval(timer);
   }
 
+  // Create carousel arrow buttons for manual navigation
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'carousel-arrow prev-arrow';
+  prevBtn.setAttribute('aria-label', 'Previous image');
+  prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'carousel-arrow next-arrow';
+  nextBtn.setAttribute('aria-label', 'Next image');
+  nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+  carousel.appendChild(prevBtn);
+  carousel.appendChild(nextBtn);
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent opening lightbox
+    stop();
+    showSlide(activeIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent opening lightbox
+    stop();
+    showSlide(activeIndex + 1);
+  });
+
   carousel.addEventListener('mouseenter', stop);
   carousel.addEventListener('mouseleave', start);
   carousel.addEventListener('focusin', stop);
@@ -131,24 +157,94 @@ document.querySelectorAll('.pub-carousel').forEach((carousel) => {
   start();
 });
 
+// Lightbox functionality
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+const lightboxClose = document.getElementById('lightboxClose');
+
+let lightboxImages = [];
+let lightboxActiveIndex = 0;
+let lightboxTrigger = null;
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+  lightboxTrigger?.focus();
+}
+
+function updateLightboxImage() {
+  if (lightboxImages.length > 0) {
+    const activeImg = lightboxImages[lightboxActiveIndex];
+    lightboxImg.src = activeImg.src;
+    lightboxImg.alt = activeImg.alt;
+  }
+}
+
+function showLightboxSlide(index) {
+  if (lightboxImages.length === 0) return;
+  lightboxActiveIndex = ((index % lightboxImages.length) + lightboxImages.length) % lightboxImages.length;
+  updateLightboxImage();
+}
 
 document.querySelectorAll('.pub-thumbnail img').forEach((img) => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
+    lightboxTrigger = img;
+    const carousel = img.closest('.pub-carousel');
+    if (carousel) {
+      lightboxImages = Array.from(carousel.querySelectorAll('img'));
+      lightboxActiveIndex = lightboxImages.indexOf(img);
+      lightbox.classList.add('has-multiple');
+      updateLightboxImage();
+    } else {
+      lightboxImages = [];
+      lightboxActiveIndex = 0;
+      lightbox.classList.remove('has-multiple');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    }
     lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    lightboxClose.focus();
   });
 });
 
-lightbox.addEventListener('click', () => {
-  lightbox.classList.remove('active');
+lightboxPrev.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  showLightboxSlide(lightboxActiveIndex - 1);
+});
+
+lightboxNext.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  showLightboxSlide(lightboxActiveIndex + 1);
+});
+
+lightboxClose.addEventListener('click', (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+
+lightbox.addEventListener('click', (event) => {
+  // Only a click on the dimmed backdrop closes the viewer.
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
 
 document.addEventListener('keydown', (event) => {
+  if (!lightbox.classList.contains('active')) return;
+
   if (event.key === 'Escape') {
-    lightbox.classList.remove('active');
+    closeLightbox();
+  } else if (event.key === 'ArrowLeft' && lightboxImages.length > 0) {
+    showLightboxSlide(lightboxActiveIndex - 1);
+  } else if (event.key === 'ArrowRight' && lightboxImages.length > 0) {
+    showLightboxSlide(lightboxActiveIndex + 1);
   }
 });
