@@ -1529,14 +1529,15 @@ strong {
     gap: 0;
     background: var(--bg-navbar);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 8px 16px;
+    padding: 0 16px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition-base);
+    transition: max-height var(--transition-base), padding var(--transition-base);
   }
 
   .nav-menu.active {
     max-height: 400px;
+    padding: 8px 16px;
   }
 
   .nav-menu a {
