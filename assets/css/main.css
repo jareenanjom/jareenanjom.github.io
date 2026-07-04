@@ -1642,3 +1642,303 @@ strong {
     height: 38px;
   }
 }
+
+/* ============================================================
+   Personal Page Custom Components
+   ============================================================ */
+.personal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.interest-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.interest-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.interest-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.interest-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: var(--accent-subtle);
+  color: var(--accent);
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px var(--accent-glow);
+}
+
+.interest-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.interest-body p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.interest-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Weightlifting Stats Custom Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.stat-box {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+  transition: border-color var(--transition-fast);
+}
+
+.stat-box:hover {
+  border-color: var(--accent);
+}
+
+.stat-val {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.stat-desc {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* Running Goal Tracker */
+.running-goal-tracker {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.goal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.goal-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.goal-percent {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.progress-track {
+  height: 8px;
+  background: var(--border-light);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, var(--accent), var(--pub-preprint));
+  border-radius: 4px;
+  transition: width var(--transition-slow);
+}
+
+.goal-milestones {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.goal-milestone.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Outdoor / Travel Showcase */
+.outdoor-banner {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 24px;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.outdoor-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.outdoor-banner:hover img {
+  transform: scale(1.03);
+}
+
+.outdoor-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.85));
+  padding: 20px 24px;
+  color: #ffffff;
+}
+
+.outdoor-caption h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.outdoor-caption p {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* Responsive adjustment for personal page elements */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .outdoor-banner {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ---------- Simple List Layout for Personal Page ---------- */
+.personal-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.personal-list li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Custom list marker using accent color */
+.personal-list li::before {
+  content: "•";
+  color: var(--accent);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.personal-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.personal-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.personal-figure {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  padding: 6px;
+  box-shadow: var(--shadow-sm);
+  max-width: 260px;
+  width: 100%;
+  transition: all var(--transition-base);
+}
+
+.personal-figure:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.personal-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.personal-figure figcaption {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  margin-top: 6px;
+  font-style: italic;
+}

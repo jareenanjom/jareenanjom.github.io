@@ -36,24 +36,55 @@ navMenu.querySelectorAll('a').forEach((link) => {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function handleAnchorClick(event) {
     const href = this.getAttribute('href');
-    if (href !== '#' && document.querySelector(href)) {
-      event.preventDefault();
-      document.querySelector(href).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    if (href && href !== '#') {
+      try {
+        const target = document.querySelector(href);
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      } catch (e) {
+        // Ignore invalid selectors
+      }
     }
   });
 });
 
 const navLinks = document.querySelectorAll('.nav-menu a');
 const navTargets = Array.from(navLinks)
-  .map((link) => document.querySelector(link.getAttribute('href')))
+  .map((link) => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      try {
+        return document.querySelector(href);
+      } catch (e) {
+        return null;
+      }
+    }
+    return null;
+  })
   .filter(Boolean);
 
 function updateActiveNav() {
   const offset = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64;
   const scrollPosition = window.scrollY + offset + 24;
+  
+  const currentPath = window.location.pathname;
+  const isPersonalPage = currentPath.includes('personal.html');
+
+  if (isPersonalPage) {
+    navLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', href === 'personal.html');
+    });
+    return;
+  }
+
+  if (navTargets.length === 0) return;
+
   let activeId = navTargets[0]?.id;
 
   navTargets.forEach((target) => {
