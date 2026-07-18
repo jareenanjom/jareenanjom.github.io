@@ -73,12 +73,12 @@ function updateActiveNav() {
   const scrollPosition = window.scrollY + offset + 24;
   
   const currentPath = window.location.pathname;
-  const isPersonalPage = currentPath.includes('personal.html');
+  const isPersonalPage = currentPath.includes('personal');
 
   if (isPersonalPage) {
     navLinks.forEach((link) => {
       const href = link.getAttribute('href');
-      link.classList.toggle('active', href === 'personal.html');
+      link.classList.toggle('active', href && href.includes('personal'));
     });
     return;
   }
